@@ -1,0 +1,21 @@
+{
+  "name": "pedersons-store-services",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "@vercel/node": "^1.8.3",
+    "await-of": "^3.1.0",
+    "dayjs": "^1.8.36",
+    "form-data": "^3.0.0",
+    "nanoid": "^3.1.12",
+    "node-fetch": "^2.6.1",
+    "random-words": "^1.1.1",
+    "signale": "^1.4.0",
+    "url": "^0.11.0",
+    "wretch": "^1.7.2"
+  }
+}

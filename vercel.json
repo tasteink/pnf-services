@@ -1,0 +1,7 @@
+{
+  "scope": "tasteink",
+
+  "env": {
+    "RECHARGE_API_KEY": "@recharge_api_key"
+  }
+}
