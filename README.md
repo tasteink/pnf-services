@@ -5,13 +5,16 @@ pnf-services is the name of a server built to allow the PNF Shopify Store (UI) t
 
 Here’s the exhaustive explanation of how it works: 
 
-1. The UI needs to be able to give the user a discount for each item added to their cart, other than the first item, but it should also allow them to provide their own discount code for promotions, sales, etc.
+1. The UI needs to be able to give the user a discount for each item added to their cart, other than the first item, but it should also allow them to provide their own discount code for promotions, sales, etc. 
+  
+    _ReCharge doesn’t support multiple discount codes, so we need to communicate with the ReCharge API to kind of “hack” multiple discounts to work. Essentially, we’re generating new discount codes “on the fly” that provide the user with combined quantity discount savings and promotional discount savings._  
 
-_ReCharge doesn’t support multiple discount codes, so we need to communicate with the ReCharge API to kind of “hack” multiple discounts to work. Essentially, we’re generating new discount codes “on the fly” that provide the user with combined quantity discount savings and promotional discount savings._
+  
+<span style="height="16px"></span>
 
 2. When a user submits a discount code, right before moving on to the ReCharge checkout, the UI sends the following data to pnf-services:
 
-The  `totalPrice`  of the user’s cart, the total number of items in the user’s cart, aka `itemCount`, and the `discountCode`  provided by the user.
+    The  `totalPrice`  of the user’s cart, the total number of items in the user’s cart, aka `itemCount`, and the `discountCode`  provided by the user.
 
 ```
 (Sample URL)
