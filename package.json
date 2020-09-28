@@ -11,6 +11,8 @@
     "await-of": "^3.1.0",
     "dayjs": "^1.8.36",
     "form-data": "^3.0.0",
+    "get-value": "^3.0.1",
+    "micro-cors": "^0.1.1",
     "nanoid": "^3.1.12",
     "node-fetch": "^2.6.1",
     "random-words": "^1.1.1",

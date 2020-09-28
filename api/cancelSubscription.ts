@@ -30,10 +30,7 @@ const cancelSubscription = async (subscriptionId, cancellation_reason = "Unprovi
 
 export default async function (req: NowRequest, res: NowResponse) {
   const { subscriptionId, cancellationReason } = req.query
-  const [subscription, error] = await cancelSubscription(
-    subscriptionId,
-    cancellationReason as string
-  )
+  const [subscription, error] = await cancelSubscription(subscriptionId, cancellationReason as string)
 
   return error
     ? res.status(200).send({ message: "SRY_IT_FAILED", error })
